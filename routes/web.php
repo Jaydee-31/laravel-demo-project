@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductController;
 use Symfony\Component\HttpFoundation\Request;
 
 /*
@@ -23,11 +24,10 @@ use Symfony\Component\HttpFoundation\Request;
 //     return view('index');
 // });
 
-Route::get('/', [MainController::class,'index'])->name('main.index');
-
-Route::get('/response-sample', function () {
-    return response('<h1>This is sample of response</h1>');
-});
+//Routing and Response
+// Route::get('/response-sample', function () {
+//     return response('<h1>This is sample of response</h1>');
+// });
 
 //wildcard
 // Route::get('/sample/{id}', function ($id) {
@@ -35,14 +35,33 @@ Route::get('/response-sample', function () {
 // });
 
 //wildcard w/ constraint
-Route::get('/sample/{id}', function ($id) {
-    return response('Post '.$id);
-})->where('id','[0-9]+');
+// Route::get('/sample/{id}', function ($id) {
+//     return response('Post '.$id);
+// })->where('id','[0-9]+');
 
-//Request & Query Params
-Route::get('/search', function (Request $request) {
-    // ddd($request);
-    // dd($request);
-    return ($request->name.' '.$request->pet);
-});
+//Request & Query Parameters
+// Route::get('/search', function (Request $request) {
+//     // ddd($request);
+//     // dd($request);
+//     return ($request->name.' '.$request->pet);
+// });
 
+//Basic View and Passing of Data
+// Route::get('/products', function () {
+//     return view('index',[
+//         'title'     =>  'Products',
+//         'heading'   =>  'Coffee',
+//         'coffee'    =>  [[
+//             'id'        =>  '1',
+//             'flavor'    =>  'Hazelnut',
+//             'desc'      =>  'We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having.'
+//         ],
+//         [
+//             'id'        =>  '2',
+//             'flavor'    =>  'Iced Americano',
+//             'desc'      =>  'We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having.'
+//         ]
+//     ]]);
+// });
+
+Route::get('/products',[ProductController::class, 'index'])->name('products.index');
