@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-left">
-                                <h2>Create New Student</h2>
+                                <h2>Create New Product</h2>
                                 <hr>
                             </div>
                             <div class="pull-right">
@@ -44,44 +44,26 @@
                             <div class="form-group row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>LRN</strong>
-                                        <input type="text" name="student_lrn" class="form-control" placeholder="LRN" value="{{ old('student_lrn') }}" autofocus>
+                                        <strong>lead</strong>
+                                        <input type="text" name="lead" class="form-control" placeholder="LRN" value="{{ old('lead') }}" autofocus>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>first_name:</strong>
-                                        <input type="text" name="first_name" class="form-control" placeholder="first_name" value="{{ old('first_name') }}">
+                                        <strong>heading:</strong>
+                                        <input type="text" name="heading" class="form-control" placeholder="heading" value="{{ old('heading') }}">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>middle_name:</strong>
-                                        <input type="text" name="middle_name" class="form-control" placeholder="middle_name" value="{{ old('middle_name') }}">
+                                        <strong>image:</strong>
+                                        <input type="text" name="image" class="form-control" placeholder="image" value="{{ old('image') }}">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <strong>last_name:</strong>
-                                        <input type="text" name="last_name" class="form-control" placeholder="last_name" value="{{ old('last_name') }}">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <strong>age:</strong>
-                                        <input type="number" name="age" class="form-control" placeholder="age" value="{{ old('age') }}">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <strong>year_level:</strong>
-                                        <input type="text" name="year_level" class="form-control" placeholder="year_level" value="{{ old('year_level') }}">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                        <strong>section:</strong>
-                                        <input type="text" name="section" class="form-control" placeholder="section" value="{{ old('section') }}">
+                                        <strong>desc:</strong>
+                                        <input type="text" name="desc" class="form-control" placeholder="desc" value="{{ old('desc') }}">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

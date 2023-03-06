@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use Symfony\Component\HttpFoundation\Request;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::resource('students', StudentController::class);
 Route::get('/products',[ProductController::class, 'index'])->name('products.index');
+
 // Route::get('/', function () {
 //     return view('index');
 // });

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Show Student</h2>
+                <h2>Show Product</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
@@ -16,44 +16,26 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Student LRN:</strong>
-                {{ $student->student_lrn }}
+                <strong>lead</strong>
+                {{ $student->lead }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Firstname:</strong>
-                {{ $student->first_name }}
+                <strong>heading:</strong>
+                {{ $student->heading }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Middlename:</strong>
-                {{ $student->middle_name }}
+                <strong>image:</strong>
+                {{ $student->image }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Lastname:</strong>
-                {{ $student->last_name }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Age:</strong>
-                {{ $student->age }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Year Level:</strong>
-                {{ $student->year_level }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Section:</strong>
-                {{ $student->section }}
+                <strong>desc:</strong>
+                {{ $student->desc }}
             </div>
         </div>
     </div>

@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <h1>Student CRUD</h1>
+        <h1>Product Admin</h1>
         <hr>
         <div class="row">
                 <div class="pull-left">
-                    <a class="btn btn-success" href="{{ route('students.create') }}"> Create New Student</a>
+                    <a class="btn btn-success" href="{{ route('students.create') }}"> Create New Product</a>
                 </div>
         
                 <div class="pull-right">
@@ -40,26 +40,22 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>LRN</th>
-                        <th>Firstname</th>
-                        <th>Middlename</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                        <th>Year Level</th>
-                        <th>Section</th>
+                        <th>ID</th>
+                        <th>Lead</th>
+                        <th>Heading</th>
+                        <th>Image</th>
+                        <th>Desc</th>
                         <th width="280px">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($students as $student)
                         <tr>
-                            <td>{{ $student->student_lrn }}</td>
-                            <td>{{ $student->first_name }}</td>
-                            <td>{{ $student->middle_name }}</td>
-                            <td>{{ $student->last_name }}</td>
-                            <td>{{ $student->age }}</td>
-                            <td>{{ $student->year_level }}</td>
-                            <td>{{ $student->section }}</td>
+                            <td>{{ $student->id }}</td>
+                            <td>{{ $student->lead }}</td>
+                            <td>{{ $student->heading }}</td>
+                            <td>{{ $student->image }}</td>
+                            <td>{{ $student->desc }}</td>
                             <td>
                                 <form action="{{ route('students.destroy', $student->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('students.show', $student->id) }}">Show</a>
@@ -77,7 +73,6 @@
             <div class="align-self-center">
                 {{ $students->links('pagination.custom') }}
             </div>
-            <div class="align-self-center">Aligned flex item</div>
     
     @endif
 </div>

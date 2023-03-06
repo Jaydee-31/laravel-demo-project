@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('student_lrn', 12)->unique();
-            $table->string('first_name', 30);
-            $table->string('middle_name', 30);
-            $table->string('last_name', 30);
-            $table->unsignedTinyInteger('age');
-            $table->string('year_level', 15);
-            $table->string('section', 30);
+            $table->string('lead');
+            $table->string('heading');
+            $table->string('image');
+            $table->text('desc');
             $table->timestamps();
         });
     }
