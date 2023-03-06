@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\ProductController;
 use Symfony\Component\HttpFoundation\Request;
-
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\Admin\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +16,12 @@ use Symfony\Component\HttpFoundation\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::resource('students', StudentController::class);
+Route::get('/products',[ProductController::class, 'index'])->name('products.index');
 // Route::get('/', function () {
 //     return view('index');
 // });
@@ -64,4 +66,19 @@ use Symfony\Component\HttpFoundation\Request;
 //     ]]);
 // });
 
-Route::get('/products',[ProductController::class, 'index'])->name('products.index');
+
+
+
+// Route::resource('admin/products', ProductController::class);
+
+// // Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->group(function () {
+// //     Route::resource('products', 'App\Http\Controllers\Admin\ProductController');
+// // });
+//     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.index');
+//     Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin.products.create');
+//     Route::post('/admin/products', [ProductController::class, 'store'])->name('admin.products.store');
+//     Route::get('/admin/products/{product}', [ProductController::class, 'show'])->name('admin.products.show');
+//     Route::get('/admin/products/{product}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
+//     Route::put('/admin/products/{product}', [ProductController::class, 'update'])->name('admin.products.update');
+//     Route::delete('/admin/products/{product}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
+

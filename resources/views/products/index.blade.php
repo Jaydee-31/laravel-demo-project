@@ -20,7 +20,7 @@
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ $list['coffee_image'] }}" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ $list['image'] }}" alt="..." />
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0">{{ $list['desc'] }}</p></div>
                     </div>
@@ -39,7 +39,7 @@
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ $list['coffee_image'] }}" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ $list['image'] }}" alt="..." />
                     <div class="product-item-description d-flex ms-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0">{{ $list['desc'] }}</p></div>
                     </div>
